@@ -143,7 +143,7 @@ void *main_continued(void *arg UNUSED)
     init_timer_caps(&env);
 
     /* Code to run */
-    printf("Code to run ***** \n");
+    printf("\"Hello, World!\n\"");
 
     return NULL;
 }
