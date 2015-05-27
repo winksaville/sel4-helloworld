@@ -1,17 +1,20 @@
 # sel4-helloworld
 
-This project is a "simple" hello world type program for seL4. It consists of multiple git repositories
-managed by [Google Repo](https://code.google.com/p/git-repo/) as are other seL4 projects. To get these
-for seL4-helloworld go to [sel4-helloworld-manifest](https://github.com/winksaville/sel4-helloworld-manifest)
+This project is a "simple" hello world type program for seL4,
+The source is [main.c](.https://github.com/winksaville/sel4-helloworld/blob/master/src/main.c).
+It consists of multiple git repositorie managed by [Google Repo](https://code.google.com/p/git-repo/)
+as are other seL4 projects. To get all of this and all of the other necessary
+repositories for seL4-helloworld go to
+[sel4-helloworld-manifest](https://github.com/winksaville/sel4-helloworld-manifest)
 and follow the instructions there.
 
-The toolchain prerequestists are [here](https://sel4.systems/Download/DebianToolChain.pml).
+Next you need the toolchain prerequisites are [here](https://sel4.systems/Download/DebianToolChain.pml).
 Then get the configuration and make the images:
 ```
 $ cp configs/ia32_simulation_helloworld_defconfig .config
 $ make
 ```
-You can then run the simulation under qemu. To quit type "ctrl-a" then "c" and "q" and then "carriage return/Enter" to exit:
+Finally, you can then run the simulation under qemu. To quit type "ctrl-a" then "c" and "q" and then "carriage return/Enter" to exit:
 ```
 $ make simulate-hw-ia32
 qemu-system-i386 \
