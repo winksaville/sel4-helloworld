@@ -2,11 +2,17 @@
 
 This project is a "simple" hello world type program for seL4,
 The source is [main.c](.https://github.com/winksaville/sel4-helloworld/blob/master/src/main.c).
-It consists of multiple git repositorie managed by [Google Repo](https://code.google.com/p/git-repo/)
+It depends on other seL4 git repositories which are managed by
+[Google Repo](https://code.google.com/p/git-repo/)
 as are other seL4 projects. To get all of this and all of the other necessary
 repositories for seL4-helloworld go to
 [sel4-helloworld-manifest](https://github.com/winksaville/sel4-helloworld-manifest)
 and follow the instructions there.
+
+Below are instructions for installation and running, but you may also want to use
+this as a starting point for "new app" projects. To do that run "[./newapp.sh](https://github.com/winksaville/sel4-build/blob/master/newapp.sh) xxx"
+where xxx is the name of the new app (Note: xxx it will be lowercased).
+
 
 Next you need the toolchain prerequisites are [here](https://sel4.systems/Download/DebianToolChain.pml).
 Then get the configuration and make the images:
