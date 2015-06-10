@@ -139,12 +139,15 @@ init_timer_caps(env_t env)
 
 void *main_continued(void *arg UNUSED)
 {
+    printf("\nmain_continued:+\n");
+
     /* get the caps we need to send to tests to set up a timer */
     init_timer_caps(&env);
 
     /* Code to run */
-    printf("\"Hello, World!\n\"");
+    printf("\"Hello, World!\"\n");
 
+    printf("main_continued:-\n\n");
     return NULL;
 }
 
@@ -153,7 +156,7 @@ int main(void)
     seL4_BootInfo *info = seL4_GetBootInfo();
 
 #ifdef SEL4_DEBUG_KERNEL
-    seL4_DebugNameThread(seL4_CapInitThreadTCB, "sel4test-driver");
+    seL4_DebugNameThread(seL4_CapInitThreadTCB, "CapInitThread");
 #endif
 
     //compile_time_assert(init_data_fits_in_ipc_buffer, sizeof(test_init_data_t) < PAGE_SIZE_4K);
